@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Photo {
+  id           String   @id @default(cuid())
+  title        String
+  src          String
+  alt          String
+  aspect       String
+  iso          String
+  aperture     String
+  location     String
+  media_type   String   @default("photo")
+  resource_type String  @default("image")
+  public_id    String?
+  priority     Int      @default(0)
+  category     String
+  createdAt    DateTime @default(now())
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String   // Client Name
+  content   String   // The review text
+  session   String?  // Optional: e.g., "Maternity Session"
+  stars     Int      @default(5)
+  approved  Boolean  @default(false) // So you can check them before they go live
+  createdAt DateTime @default(now())
+}
+
+
+model Booking {
+  id            String   @id @default(cuid())
+  name          String
+  email         String
+  phone         String
+  sessionType   String
+  preferredDate String
+  peopleCount   String?
+  childAges     String?
+  message       String?
+  createdAt     DateTime @default(now())
+}
+

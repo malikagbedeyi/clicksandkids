@@ -11,7 +11,6 @@ export default function Footer() {
   <div className="footer-container">
     {/* Upper Footer: Branding & Big CTA */}
     <div className="footer-upper">
-      // Inside Footer.tsx
 <div className="footer-brand-area">
   <Link href="/">
     <img 

@@ -3,25 +3,26 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("POSTGRES_PRISMA_URL") 
+  provider  = "postgresql"
+  // Changed to NON_POOLING to prevent Vercel build timeouts
+  url       = env("POSTGRES_URL_NON_POOLING")
 }
 
 model Photo {
-  id           String   @id @default(cuid())
-  title        String
-  src          String
-  alt          String
-  aspect       String
-  iso          String
-  aperture     String
-  location     String
-  media_type   String   @default("photo")
-  resource_type String  @default("image")
-  public_id    String?
-  priority     Int      @default(0)
-  category     String
-  createdAt    DateTime @default(now())
+  id            String   @id @default(cuid())
+  title         String
+  src           String
+  alt           String
+  aspect        String
+  iso           String
+  aperture      String
+  location      String
+  media_type    String   @default("photo")
+  resource_type String   @default("image")
+  public_id     String?
+  priority      Int      @default(0)
+  category      String
+  createdAt     DateTime @default(now())
 }
 
 model Testimonial {
@@ -34,7 +35,6 @@ model Testimonial {
   createdAt DateTime @default(now())
 }
 
-
 model Booking {
   id            String   @id @default(cuid())
   name          String
@@ -43,9 +43,7 @@ model Booking {
   sessionType   String
   preferredDate String
   peopleCount   String?
-  childAges     String?
+  childAges      String?
   message       String?
   createdAt     DateTime @default(now())
 }
-
-//

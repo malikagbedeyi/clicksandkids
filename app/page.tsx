@@ -24,7 +24,7 @@ export default async function HomePage() {
     <main className="min-h-screen bg-[#0A0A0A]">
       <HeroContent />
 
-      <section className="page-shell home-section">
+      <section className="page-shell home-section mobile-who">
         <div className="note-on-childhood">
           <div className="note-copy">
             <span className="eyebrow">Who We Are</span>

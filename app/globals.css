@@ -1,14 +1,17 @@
 /* app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 
 :root {
   color-scheme: dark;
   
   /* The Novo Palette */
-  --bg: #0A0A0A;           /* Deep Black */
-  --text-main: #FFFFFF;    /* Pure White */
-  --accent: #C8A988;       /* Golden Tan from Novo */
-  --text-muted: rgba(255, 255, 255, 0.6);
-  --border: rgba(255, 255, 255, 0.1);
+  --bg: #ffffff;           /* Deep Black */
+  --text-main: #ffffff;    
+  --text-secordary-main: #444444;    /* Pure White */
+  --accent: #cfa77b;       /* Golden Tan from Novo */
+  --text-muted:#444;
+  --border: rgba(63, 55, 55, 0.1);
   
   /* Fonts */
   --font-montserrat: "Montserrat", sans-serif;
@@ -27,7 +30,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: var(--bg);
-  color: var(--text-main);
+  color: var(--text-secordary-main);
   font-family: var(--font-montserrat);
   line-height: 1.6;
   overflow-x: hidden;
@@ -75,6 +78,7 @@ a{
   z-index: 100;
   padding: 2rem 0;
   transition: all 0.4s ease;
+  
 }
 
 .site-header--scrolled {
@@ -96,6 +100,7 @@ a{
 }
  .nav-shell .nav-link{
     text-decoration: none!important;
+     color: var(--text-main);
   }
 
 .brand {
@@ -199,6 +204,7 @@ margin: 40px;
   line-height: 1.1;
   margin: 1.5rem 0;
   text-transform: uppercase;
+  color: var(--text-main);
 }
 
 /* The outlined text effect from Novo */
@@ -214,7 +220,7 @@ margin: 40px;
 
 .hero-description {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: var(--text-main);
   max-width: 450px;
   margin-bottom: 2.5rem;
 }
@@ -639,11 +645,26 @@ margin: 40px;
 
 /* === Why Choose Us - Novo Refinement === */
 
+.combine-section {
+  width: 100%;
+  /* height: 100vh; */
+  background-image: url(../public/image/gallery/img-01.jpg);
+  background-size: cover;
+  background-position: center 0;
+  background-attachment: fixed; 
+  position: relative;
+  text-align: center;
+}
+.combine-section-overlay{
+position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
 
 .why-choose-section {
   width: 100%;
   padding: 120px 0;
-  background-color: #0A0A0A;
+  /* background-: #0A0A0A; */
   text-align: center;
 }
 
@@ -800,6 +821,8 @@ margin: 40px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+   position: relative;
+  z-index: 2;
 }
 
 .plan-card {
@@ -814,12 +837,12 @@ margin: 40px;
 
 .plan-card:hover {
   border-color: var(--accent);
-  background: rgba(200, 169, 136, 0.05); /* Glow with the accent color */
+  background: rgba(251, 251, 250, 0.05); /* Glow with the accent color */
   transform: translateY(-10px);
 }
 
 .plan-name {
-  color: var(--accent);
+  color: var(--text-main);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.8rem;
@@ -831,13 +854,13 @@ margin: 40px;
 .plan-price {
   font-family: var(--font-playfair);
   font-size: 3.5rem;
-  color: #FFFFFF;
+  color: var(--text-main);
   margin-bottom: 1.5rem;
   font-weight: 600;
 }
 
 .plan-details {
-  color: var(--text-muted);
+  color: var(--accent);
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 2.5rem;
@@ -1145,16 +1168,16 @@ margin: 40px;
 }
 
 .view-more-link:hover {
-  color: #fff;
-  border-color: #fff;
+  color: var(--text-secordary-main);
+  border-color: var(--text-secordary-main);
   letter-spacing: 6px; /* Elegant expansion on hover */
 }
 
 /* === Testimonial Section - Novo Style === */
 
 .testimonial-section {
-  padding: 160px 0;
-  background-color: #0A0A0A;
+  padding: 50px 0;
+  background-color: var(--text-main);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -1175,7 +1198,7 @@ margin: 40px;
 .testimonial-quote {
   font-family: var(--font-playfair);
   font-size: clamp(1.5rem, 3vw, 2.2rem);
-  color: #FFFFFF;
+  color:var(--text-secordary-main);
   line-height: 1.6;
   font-style: italic;
   font-weight: 300;
@@ -1204,7 +1227,7 @@ margin: 40px;
   letter-spacing: 4px;
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: #FFFFFF;
+  color: var(--text-secordary-main);
   margin-bottom: 8px;
 }
 
@@ -1265,15 +1288,30 @@ margin: 40px;
 /* === Final Footer - Novo Editorial Style === */
 
 .footer-section {
-  background-color: #0A0A0A;
+  background-color: var(--text-main);
   padding: 120px 0 60px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  /* height: 100vh; */
+  background-image: url(../public/image/gallery/img-01.jpg);
+  background-size: cover;
+  background-position: center 0;
+  background-attachment: fixed; 
+  position: relative;
+  text-align: center;
+}
+.combine-section-overlay{
+position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
 }
 
 .footer-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 5%;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-upper {
@@ -1283,6 +1321,7 @@ margin: 40px;
   gap: 60px;
   padding-bottom: 80px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  
 }
 
 @media (min-width: 992px) {
@@ -1295,12 +1334,12 @@ margin: 40px;
 .footer-logo {
   font-family: var(--font-playfair);
   font-size: 3rem;
-  color: #fff;
+  color: var(--text-secordary-main);;
   margin-bottom: 20px;
 }
 
 .footer-tagline {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-main);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -1308,7 +1347,7 @@ margin: 40px;
 .footer-huge-link {
   font-family: var(--font-playfair);
   font-size: clamp(2rem, 5vw, 4rem);
-  color: #fff;
+  color: var(--text-main);;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -1351,14 +1390,14 @@ margin: 40px;
 }
 
 .footer-links a, .footer-info {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-main);
   font-size: 0.85rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: var(--text-main);
 }
 
 /* Bottom Bar */
@@ -1370,7 +1409,7 @@ margin: 40px;
   gap: 20px;
   padding-top: 60px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
   font-size: 0.75rem;
   letter-spacing: 1px;
 }
@@ -1399,7 +1438,7 @@ margin: 40px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #0A0A0A;
+  background-color: var(--text-main);
 }
 
 @media (min-width: 992px) {
@@ -1447,7 +1486,7 @@ margin: 40px;
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.1;
   margin: 20px 0 40px;
-  color: #fff;
+  color: var(--text-secordary-main);
 }
 
 .about-text {
@@ -1501,6 +1540,7 @@ margin: 40px;
 .gallery-page-header {
   padding: 160px 0 60px;
   text-align: center;
+  color: var(--text-main);
   background: linear-gradient(to bottom, #0F0F0F, #0A0A0A);
 }
 
@@ -1546,7 +1586,7 @@ margin: 40px;
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
-  background: #111;
+  background: #111; 
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.05);
 }
@@ -1614,284 +1654,25 @@ margin: 40px;
   display: none;
 }
 
-/*====================== pricing ======================= */
-
-.novo-pricing-wrapper {
-  padding: 160px 0 0;
-  background: #000;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: visible; 
-}
-
-.novo-pricing-container {
-  margin: 10% 0;
-  display: flex;
-  height: 100%;
-  width: 100%;
-  overflow-x: auto; 
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.novo-pricing-container::-webkit-scrollbar {
-  display: none;
-}
-
-.novo-pricing-container {
-  -ms-overflow-style: none;  
-  scrollbar-width: none;  
-}
-
-.pricing-column {
-  flex-shrink: 0;
-  min-width: 33.33vw; 
-  height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 20px;
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-  scroll-snap-align: start;
-}
-
-@media (max-width: 992px) {
-  .pricing-column {
-    min-width: 85vw; 
-  }
-}
-@media (max-width: 768px) {
-  .pricing-column {
-    min-width: 75vw; 
-  }
-}
-
-.column-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.column-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%) brightness(0.3);
-  transition: transform 1.2s ease, filter 0.8s ease;
-}
-
-.column-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent, #0A0A0A 95%);
-  z-index: 1;
-}
-
-.pricing-column:hover .column-bg img {
-  transform: scale(1.1);
-  filter: grayscale(0%) brightness(0.5);
-}
-
-/* Content Styling */
-.column-header, .column-center, .column-footer {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.huge-price {
-  font-family: var(--font-montserrat);
-  font-weight: 900;
-  font-size: clamp(5rem, 10vw, 8rem);
-  color: #fff;
-  line-height: 1;
-  margin-bottom: 20px;
-  letter-spacing: -5px;
-}
-
-.huge-price .currency {
-  font-size: 0.4em;
-  vertical-align: top;
-  margin-right: -10px;
-}
-
-.purchase-btn {
-  display: inline-block;
-  background: var(--accent);
-  color: #000;
-  padding: 12px 35px;
-  font-size: 10px;
-  letter-spacing: 3px;
-  font-weight: 800;
-  text-decoration: none;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-}
-
-.pricing-column:hover .purchase-btn {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.purchase-btn:hover {
-  background: #fff;
-}
-
-/* Options Reveal */
-.options-trigger {
-  font-size: 10px;
-  letter-spacing: 4px;
-  color: rgba(255, 255, 255, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.hidden-details {
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.6s ease;
-  overflow: hidden;
-}
-
-.pricing-column:hover .hidden-details {
-  max-height: 300px;
-  opacity: 1;
-  margin-top: 25px;
-}
-
-.details-list {
-  list-style: none;
-  padding: 0;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 11px;
-  letter-spacing: 2px;
-  line-height: 2;
-  text-transform: uppercase;
-}
-
-/* === Add-On Editorial Styling === */
-
-.addon-section {
-  margin: 30% 0 0;
-  background-color: #0A0A0A;
-  padding: 160px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.addon-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 5%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 60px;
-}
-.addon-header {
-  grid-column: span 4;
-}
-
-.addon-main-title {
-  font-family: var(--font-playfair);
-  font-size: clamp(3rem, 5vw, 5rem);
-  color: #fff;
-  line-height: 1.1;
-  font-style: italic;
-  margin-top: 20px;
-}
-
-.addon-list-wrap {
-  grid-column: span 8;
-}
-
-.addon-row {
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.addon-row-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-bottom: 15px;
-}
-
-.addon-num {
-  font-size: 10px;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
-
-.addon-item-name {
-  font-family: var(--font-montserrat);
-  font-size: 1.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: rgba(255, 255, 255, 0.7);
-  transition: all 0.4s ease;
-}
-
-.addon-item-price {
-  font-family: var(--font-playfair);
-  font-size: 2.5rem;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.4s ease;
-}
-
-.addon-line {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.05);
-  transition: all 0.4s ease;
-}
-
-/* Hover Effects */
-.addon-row:hover .addon-item-name {
-  color: #fff;
-  transform: translateX(10px);
-}
-
-.addon-row:hover .addon-item-price {
-  color: var(--accent);
-}
-
-.addon-row:hover .addon-line {
-  background: var(--accent);
-  width: 100%;
-}
-
-/* Footer Notes */
-.addon-footer-notes {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 
 
 /* === Booking Page Layout Fix === */
 
 .booking-page-wrapper {
-  background-color: #0A0A0A;
+  /* background-color: #0A0A0A; */
+   background-image: url(../public/image/gallery/img-01.jpg);
+  background-size: cover;
+  background-position: center 0;
+  background-attachment: fixed; 
+  position: relative;
   min-height: 100vh;
   padding: 160px 0 100px;
 }
-
+.section-overlay{
+position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
 .booking-grid-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -1899,6 +1680,8 @@ margin: 40px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 80px;
+  position: relative;
+  z-index: 2;
 }
 
 /* LEFT SIDE */
@@ -2004,7 +1787,9 @@ margin: 40px;
   margin-bottom: 8px;
   font-weight: 700;
 }
-
+.form-group input::placeholder,textarea::placeholder{
+color: var(--text-main);
+} 
 .form-group input, 
 .form-group select, 
 .form-group textarea {
@@ -2028,7 +1813,7 @@ margin: 40px;
 .booking-submit-btn {
   margin-top: 20px;
   background: #C8A988;
-  color: black;
+  color: var(--text-main);
   padding: 20px;
   font-size: 11px;
   font-weight: 800;
@@ -2037,7 +1822,7 @@ margin: 40px;
 }
 
 .booking-submit-btn:hover {
-  background: white;
+  background: var(--accent);
   letter-spacing: 6px;
 }
 
@@ -2052,12 +1837,18 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* === Contact Page Styling === */
 
 .contact-page-wrapper {
-  background-color: #0A0A0A;
+  background-color: var(--text-main);
+   background-image: url(../public/image/gallery/photo-03.jpg);
+  background-size: cover;
+  background-position: center 0;
+  background-attachment: fixed; 
+  position: relative;
   min-height: 100vh;
   padding: 160px 0 100px;
   display: flex;
   align-items: center;
 }
+
 
 .contact-container {
   max-width: 1400px;
@@ -2067,6 +1858,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   grid-template-columns: repeat(12, 1fr);
   gap: 100px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 /* Left Side Typography */
@@ -2075,12 +1868,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: var(--text-main);
 }
 
 .contact-main-title {
   font-family: var(--font-playfair);
   font-size: clamp(4rem, 7vw, 7rem);
-  color: #fff;
+  color: var(--text-main);
   line-height: 1.1;
   font-style: italic;
   margin: 40px 0;
@@ -2090,89 +1884,133 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: rgba(255, 255, 255, 0.2);
+  color:var(--text-main);
 }
 
 /* Right Side Content */
-.contact-info-side {
-  grid-column: span 6;
-  padding-left: 60px;
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 120px;
+  border-radius: 4px;
+  
 }
 
 .info-label {
-  font-size: 10px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: var(--accent);
   font-weight: 800;
-  margin-bottom: 20px;
-  display: block;
+  margin-bottom: 25px;
 }
 
 .info-text {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
   line-height: 1.8;
-  max-width: 400px;
   margin-bottom: 30px;
 }
 
-.contact-link {
+.contact-email-link {
   font-family: var(--font-playfair);
-  font-size: 2rem;
-  color: #fff;
-  padding-bottom: 10px;
-  transition: all 0.4s ease;
-  text-decoration: none!important;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200, 169, 136, 0.3);
+  padding-bottom: 5px;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+.contact-email-phone {
+  font-family: var(--font-playfair);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: 0.3s ease;
+  padding: 0;
 }
 
-.contact-link:hover {
+.contact-email-link:hover,.contact-email-phone:hover
+ {
   color: var(--accent);
-  border-color: #fff;
+  border-color: var(--accent);
 }
 
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 30px;
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .info-detail {
-  color: #fff;
-  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  line-height: 1.6;
+  text-transform: uppercase;
   letter-spacing: 1px;
-  line-height: 1.5;
+}
+
+.info-detail span {
+  color: #fff;
+  font-size: 18px;
+  text-transform: none;
+  letter-spacing: 0;
+  display: block;
+  margin-top: 5px;
+}
+
+.social-section {
+  margin-top: 50px;
+}
+
+.magnetic-wrapper {
+  margin-left: -15px; /* Alignment fix */
+}
+
+.instagram-tag {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-top: 20px;
+  display: block;
 }
 
 .contact-disclaimer {
-  margin-top: 100px;
-  padding-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  font-size: 10px;
+  margin-top: 60px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.2);
-  line-height: 2;
-  font-style: italic;
+  letter-spacing: 1.5px;
+  color: var(--text-main);
+  border-left: 2px solid var(--accent);
+  padding-left: 20px;
 }
 
-@media (max-width: 992px) {
+.contact-disclaimer .highlight {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
   .contact-container {
     grid-template-columns: 1fr;
-    gap: 80px;
   }
-  .contact-visual-side, .contact-info-side {
-    grid-column: span 1;
+  .contact-visual-side {
+    padding-right: 0;
+    margin-bottom: 40px;
   }
-  .contact-info-side {
-    padding-left: 0;
-    border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 80px;
+  .glass-card {
+    padding: 40px 30px;
   }
 }
-
 
 /* === Admin Dashboard Layout format === */
 
@@ -2182,14 +2020,42 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   min-height: 100vh;
 }
 
+.media-shell-container{
+  background-color: var(--text-main);
+  /* background-image: url(../public/image/gallery/photo-04.webp); Ensure path is correct */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.media-section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
 .manage-media-shell, .upload-zone {
-  max-width: 1200px;
+  /* max-width: 500px; */
+  /* min-width: 1000px; */
   margin: 0 auto;
-  background: #111; 
-  border-radius: 40px; 
-  padding: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+ background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 60px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+
 }
 
 /* Manage Grid format */
@@ -2200,8 +2066,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .manage-card {
-  background: #181818;
+  /* background: #fff; */
   border-radius: 30px; /* Rounded cards */
+   background-image: url(../public/image/gallery/img-02.JPG);
+   background-position:center  bottom ;
+   object-fit: cover;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -2209,10 +2078,20 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-.manage-card-media {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: #000;
+.manage-card-media {  
+   background: rgba(255, 255, 255, 0.2); 
+
+  backdrop-filter: blur(12px); 
+ 
+  -webkit-backdrop-filter: blur(12px);  
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),   
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);  
+  aspect-ratio: 2/3;
+  background: #fff;
   overflow: hidden;
 }
 
@@ -2249,8 +2128,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .delete-button:hover {
-  background: white;
-  color: black;
+  background: var(--text-secordary-main);
+  color: var(--text-main);
 }
 
 /* Upload Zone format */
@@ -2787,7 +2666,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .faq-question:hover span {
-  color: #C8A988; /* Gold on hover */
+  color: var(--accent); /* Gold on hover */
 }
 
 .faq-icon {
@@ -2815,8 +2694,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 /* === FAQ Section Modern Look === */
 
 .faq-section-wrapper {
-  padding: 160px 5%;
-  background: #0A0A0A;
+  padding: 20px 5%;
+  background: var(--text-main);
   display: flex;
   justify-content: center;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -2835,17 +2714,17 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .faq-header h2 {
   font-family: var(--font-playfair);
   font-size: clamp(2.5rem, 5vw, 4rem);
-  color: #fff;
+  color: var(--text-secordary-main);
   font-style: italic;
   margin-top: 15px;
 }
 
 .faq-accordion {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--accent)
 }
 
 .faq-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--accent);
 }
 
 .faq-trigger {
@@ -2863,15 +2742,15 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .faq-q-text {
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--text-secordary-main);
   font-weight: 500;
   transition: color 0.3s ease;
   padding-right: 40px;
 }
 
 .faq-trigger:hover .faq-q-text {
-  color: #C8A988; /* Gold highlight */
-}
+  color: var(--accent); /* Gold highlight */
+} 
 
 /* Custom Plus Icon Animation */
 .faq-plus-icon {
@@ -2882,7 +2761,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .v-line, .h-line {
-  background: #C8A988;
+  background: var(--accent);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2905,7 +2784,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 .faq-answer-inner p {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-secordary-main);
   font-size: 1.1rem;
   line-height: 1.8;
 }
@@ -3044,10 +2923,328 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   .hero-title { font-size: 3.5rem; }
 }
 
+/* ========================================
+   PRICING PAGE - Editorial Minimalist Style
+   ======================================== */
+
+/* Light beige background for pricing page */
+.pricing-page-light {
+  background-color: #E8E5E0;
+  min-height: 100vh;
+  color: #2a2a2a;
+  padding-top: 100px;
+}
+
+/* Pricing Hero Section */
+.pricing-hero {
+  text-align: center;
+  padding: 4rem 8%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eyebrow-dark {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #8a8a8a;
+  margin-bottom: 1.5rem;
+}
+
+.editorial-title {
+  font-family: var(--font-playfair);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.editorial-title i {
+  font-style: italic;
+  font-weight: 400;
+  color: #6b6b6b;
+}
+
+/* Vertical Package List */
+.packages-vertical-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 8%;
+}
+
+.package-row {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.package-row:hover {
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.package-info {
+  width: 100%;
+}
+
+.package-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.package-name {
+  font-family: var(--font-playfair);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.package-price {
+  font-family: var(--font-montserrat);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #6b6b6b;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.package-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.package-details-list li {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0.3rem 0;
+  letter-spacing: 0.02em;
+}
+
+.package-details-list li::before {
+  content: "•";
+  margin-right: 0.5rem;
+  color: #8a8a8a;
+}
+
+/* Minimalist Pill Button */
+.book-btn-minimal {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.book-btn-minimal:hover {
+  background: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Add-Ons Section */
+.addons-minimal {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 4rem 8%;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.addons-title {
+  font-family: var(--font-playfair);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.addon-item {
+  padding: 1rem 0;
+}
+
+.addon-text {
+  font-size: 0.9rem;
+  color: #555;
+  letter-spacing: 0.02em;
+}
+
+.addon-text::before {
+  content: "*";
+  margin-right: 0.3rem;
+  color: #8a8a8a;
+}
+
+/* Pricing Disclaimer */
+.pricing-disclaimer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
+
+.pricing-disclaimer p {
+  font-size: 0.85rem;
+  color: #8a8a8a;
+  margin: 0.5rem 0;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive adjustments for pricing */
+@media (max-width: 768px) {
+  .pricing-page-light {
+    padding-top: 80px;
+  }
+  
+  .pricing-hero {
+    padding: 3rem 5%;
+  }
+  
+  .packages-vertical-container {
+    padding: 1rem 5%;
+  }
+  
+  .package-row {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .package-header-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .package-name {
+    font-size: 1.25rem;
+  }
+  
+  .addons-minimal {
+    padding: 3rem 5%;
+    margin: 2rem auto;
+  }
+}
 
 
 
 
 
 
+/* Add this to your existing styles to ensure the image container pops */
+.package-image-wrap {
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+}
 
+
+/* === Pricing Page Editorial Styles === */
+
+@layer base {
+  html {
+    /* Set the background for the whole page to match the beige tone */
+    /* background-color: #E8E5E0;  */
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Main Container Background */
+  .pricing-page-main {
+    background-color: #E8E5E0;
+    color: #1a1a1a;
+  }
+
+  /* Typography: Playfair Display for Serifs */
+  /* Ensure you have Google Font 'Playfair Display' imported in your project */
+  .font-serif {
+    font-family: 'Playfair Display', serif !important;
+  }
+
+  /* Italicized Highlight Styling */
+  .font-serif i {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #C8A988; /* Soft Gold/Tan accent color */
+    padding-right: 2px;
+  }
+
+  /* Image Container shadow and hover effect */
+  .package-image-wrap {
+    @apply shadow-2xl transition-all duration-1000;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+  }
+
+  /* The "Book & Pay" Button */
+  .booking-button {
+    @apply transition-all duration-500 ease-in-out transform;
+  }
+
+  .booking-button:hover {
+    @apply shadow-lg -translate-y-1;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
+  }
+
+  /* Add-ons bullet/star styling */
+  .addon-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: #4a4a4a;
+  }
+}
+
+/* Custom Scrollbar to match the aesthetic */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E8E5E0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8A988;
+  border-radius: 5px;
+}
+
+/* Responsive spacing adjustments */
+@media (max-width: 640px) {
+  .text-5xl {
+    font-size: 2.8rem !important;
+    line-height: 1.1;
+  }
+  
+  .mb-40 {
+    margin-bottom: 5rem !important; /* Tighter spacing on mobile */
+  }
+}

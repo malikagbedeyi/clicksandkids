@@ -18,6 +18,7 @@ const bookingSteps = [
 export default function BookingPage() {
   return (
     <main className="booking-page-wrapper">
+      <div className="section-overlay"></div>
       <div className="booking-grid-container">
         
         {/* Left Side: Editorial Instructions */}
@@ -41,9 +42,9 @@ export default function BookingPage() {
         {/* Right Side: High-End Form */}
         <section className="booking-form-section">
           <div className="form-inner-box">
-            <div className="form-header">
-              <h2 className="font-serif text-4xl mb-2 text-white italic">Booking Enquiry Form</h2>
-              <p className="text-[#C8A988] text-[10px] tracking-[4px] uppercase font-bold">
+            <div className="form-header" style={{color:"#fff"}}>
+              <h2 className="font-serif text-4xl mb-2 text-white italic" >Booking Enquiry Form</h2>
+              <p className=" text-[10px] tracking-[4px] uppercase font-bold" style={{color:"#fff"}}>
                 Fill in the details below to start your story
               </p>
             </div>

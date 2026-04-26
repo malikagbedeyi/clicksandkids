@@ -13,13 +13,13 @@ export default async function ManagePage() {
   const mediaList = await getPhotos();
 
    return (
-  <main className="min-h-screen bg-[#0A0A0A] pt-32 pb-20" style={{padding:"160px 0 0"}}>
+  <main className="min-h-screen bg-[#fff] pt-32 pb-20 " style={{padding:"160px 0 0"}}>
        <div className="mb-10">
   <Link href="/admin" className="text-white/30 hover:text-[#C8A988] transition-colors text-[10px] tracking-[3px] uppercase">
     ← Back to Hub
   </Link>
 </div>
-  <div className="max-w-[1400px] mx-auto px-6" style={{alignContent: "center",textAlign: "center"}}>
+  <div className="max-w-[1400px] mx-auto px-6 manage-glass-card" style={{alignContent: "center",textAlign: "center"}}>
     <section className="mb-16 border-b border-white/5 pb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
       <div>
         <span className="eyebrow !text-[#C8A988]">Archive</span>

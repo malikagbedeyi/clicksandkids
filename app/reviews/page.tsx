@@ -35,7 +35,8 @@ export default function ReviewPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#0A0A0A] pt-40 pb-20 px-6" style={{padding:"160px 0"}}>
+    <main className="media-shell-container min-h-screen bg-[#0A0A0A] pt-40 pb-20 px-6" style={{padding:"160px 0"}}>
+      <div className="media-section-overlay"></div>
       <div className="manage-media-shell !max-w-2xl !p-12">
         <div className="text-center mb-10">
           <span className="eyebrow">Feedback</span>

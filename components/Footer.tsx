@@ -8,11 +8,12 @@ export default function Footer() {
 
   return (
    <footer className="footer-section">
+    <div className="combine-section-overlay"></div>
   <div className="footer-container">
     {/* Upper Footer: Branding & Big CTA */}
     <div className="footer-upper">
 <div className="footer-brand-area">
-  <Link href="/">
+  {/* <Link href="/">
     <img 
       src="/image/logo/logo-03.png" 
       alt="Clicks & Kids Logo" 
@@ -22,7 +23,7 @@ export default function Footer() {
   <p className="footer-tagline mt-6">
     Capturing the magic of childhood, <br /> 
     one milestone at a time.
-  </p>
+  </p> */}
 </div>
       
       <div className="footer-cta-area">

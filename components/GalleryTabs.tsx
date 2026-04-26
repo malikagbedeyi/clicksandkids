@@ -51,7 +51,7 @@ export default function GalleryTabs({ initialPhotos, initialVideos }: GalleryTab
   return (
     <div className="w-full">
       <div className="gallery-tabs-nav">
-        {["photos", "videos"].map((tab) => (
+        {["photos", ""].map((tab) => (
           <button
             key={tab}
             onClick={() => { 
@@ -77,7 +77,7 @@ export default function GalleryTabs({ initialPhotos, initialVideos }: GalleryTab
         <div className="flex flex-col md:flex-row gap-8 items-center justify-between border-b border-white/5 pb-10">
           
           {/* Minimalist Search Field */}
-          <div className="relative w-full md:w-80">
+          {/* <div className="relative w-full md:w-80">
             <input
               type="text"
               placeholder="SEARCH MOMENTS..."
@@ -85,7 +85,7 @@ export default function GalleryTabs({ initialPhotos, initialVideos }: GalleryTab
               onChange={(e) => setSearchQuery(e.target.value)}
               className="gallery-search-input"
             />
-          </div>
+          </div> */}
 
           {/* Category Filter Buttons
           <div className="category-filter-list flex gap-8">

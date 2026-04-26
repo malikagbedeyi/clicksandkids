@@ -2,118 +2,183 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Footer from "../../components/Footer";
+import Image from "next/image";
 
 const packages = [
-  { name: "Kid's Mini", price: "100", details: ["1 Outfit", "25-min Session", "4 Edited + 2 JPEGs", "Plain Backdrop"], img: "/image/gallery/img-08.jpg" },
-  { name: "Portrait", price: "150", details: ["1 Outfit", "35-min Session", "4 Edited + 4 JPEGs", "Plain Backdrop"], img: "/image/gallery/img-01.jpg" },
-  { name: "Kid's Standard", price: "200", details: ["2 Outfits", "45-min Session", "6 Edited + 6 JPEGs", "1 Themed & 1 Plain"], img: "/image/gallery/img-03.jpg" },
-  { name: "Maternity", price: "220", details: ["2 Outfits", "1-hour Session", "6 Edited + 6 JPEGs", "1 Themed & 1 Plain"], img: "/image/gallery/img-04.jpg" },
-  { name: "African Trad", price: "120", details: ["1 Outfit", "35-min Session", "5 Edited + 5 JPEGs", "Trad Set Build"], img: "/image/gallery/img-05.jpg" },
-  { name: "Cake Smash", price: "180", note: "6–18 months", details: ["1 Outfit", "45-min Session", "6 Edited + 2 JPEGs", "Mini Balloon Setup"], img: "/image/gallery/img-06.jpg" },
-  { name: "Mummy & Me", price: "150", details: ["1 Outfit", "45-min Session", "4 Edited + 6 JPEGs", "Plain Backdrop"], img: "/image/gallery/img-02.jpg" },
-  { name: "Siblings", price: "150", note: "Max 3", details: ["1 Outfit", "45-min Session", "4 Edited + 6 JPEGs", "Themed or Plain"], img: "/image/gallery/img-07.jpg" },
-  { name: "Twins", price: "250", details: ["2 Outfits", "1-hour Session", "6 Edited + 8 JPEGs", "1 Custom & 1 Plain"], img: "/image/gallery/img-04.jpg" },
-  { name: "Family", price: "200", note: "Max 4", details: ["1 Outfit", "1-hour Session", "6 Edited + 8 JPEGs", "Plain Backdrop"], img: "/image/gallery/img-02.jpg" },
+  { 
+    name: "Kid's Mini Session", 
+    price: "120", 
+    image: "/image/gallery/img-07.jpg", // Child with cake on face
+    details: ["1 Outfit", "25-minute studio session", "4 Edited Images", "Plain Backdrop"] 
+  },
+  { 
+    name: "Portrait Session", 
+    price: "180", 
+    image: "/image/gallery/img-01.jpg", // Woman in brown blazer
+    details: ["1 Outfit", "40-minute studio session", "6 Edited Images", "Plain Backdrop"] 
+  },
+  { 
+    name: "Kid's Standard Session", 
+    price: "220", 
+    image: "/image/gallery/img-06.jpg", // Child in red dress
+    details: ["2 Outfits", "45-minute studio session", "6 Edited Images", "1 Themed & 1 Plain Backdrop"] 
+  },
+  { 
+    name: "Maternity Session", 
+    price: "220", 
+    image: "/image/gallery/img-04.jpg", // Pregnant woman with child
+    details: ["1 Outfit", "1-hour studio session", "6 Edited Images", "1 Themed & 1 Plain Backdrop"] 
+  },
+  { 
+    name: "African Trad Session", 
+    price: "150", 
+    image: "/image/gallery/img-03.jpg", // Boy in traditional blue attire
+    details: ["1 Outfit", "30-minute studio session", "5 Edited Images", "Trad set build"] 
+  },
+  { 
+    name: "Cake Smash (6–18 months)", 
+    price: "180", 
+    image: "/image/gallery/img-05.jpg", // Child with purple balloons
+    details: ["1 Outfit", "30-minute studio session", "6 Edited Images", "Mini balloon setup"] 
+  },
+  { 
+    name: "Mummy & Me Session", 
+    price: "180", 
+    image: "/image/gallery/img-02.jpg", // Mother hugging child
+    details: ["1 Outfit", "45-minute studio session", "4 Edited Images", "Plain Backdrop"] 
+  },
+  { 
+    name: "Siblings Session (Max 3)", 
+    price: "180", 
+    image: "/image/gallery/img-06.jpg", 
+    details: ["1 Outfit", "45-minute studio session", "4 Edited Images", "Themed or Plain Backdrop"] 
+  },
+  { 
+    name: "Twins Session", 
+    price: "300", 
+    image: "/image/gallery/img-05.jpg", 
+    details: ["2 Outfits", "1 hour 30-minute studio session", "6 Edited + 8 JPEGs", "1 Custom & 1 Plain Backdrop"] 
+  },
+  { 
+    name: "Family Session (Max 4)", 
+    price: "250", 
+    image: "/image/gallery/img-04.jpg", 
+    details: ["1 Outfit", "45-minute studio session", "6 Edited Images", "Plain Backdrop"] 
+  },
+  { 
+    name: "Family Premium (Max 4)", 
+    price: "350", 
+    image: "/image/hero/photo-img.jpg", 
+    details: ["2 Outfits for child", "1 Outfit for parents", "1 Themed Backdrop for child", "1 hour 25-minute studio session", "6 Edited Images", "Plain Backdrop for family"] 
+  },
+  { 
+    name: "Kids Premium Session", 
+    price: "350", 
+    image: "/image/gallery/img-08.jpg", // Child in traditional green/orange outfit on throne
+    details: ["3 Outfits (Cake smash, Trad & more)", "1 hour 30-minute studio session", "9 Edited Images", "Trad set build", "Themed Backdrop for Cake Smash"] 
+  },
 ];
 
 const addOns = [
-  { title: "Extra Person", price: "€50" },
-  { title: "Extra Outfit", price: "€100" },
-  { title: "Extra Images", price: "€10 / image" },
-  { title: "Express Delivery", price: "€50" },
-  { title: "Custom Theme Backdrop", price: "€120" },
+  { title: "Wedding Album", price: "from €400" },
+  { title: "Additional Photographer", price: "€100 p/h (min 4hrs)" },
+  { title: "Pre Wedding Shoot", price: "from €350" },
+  { title: "Civil Registry (2-3 hours)", price: "from €400" },
+  { title: "Proposal / Engagement", price: "from €400" },
+  { title: "Large Canvas Wall Frame", price: "€100" },
 ];
-
 
 export default function PricingPage() {
   return (
-    <>
-    <main className="bg-[#0A0A0A] w-full ">
-
-      <section className="novo-pricing-wrapper w-full relative ">
-
-        <div className="pricing-header" style={{display:"flex",flexDirection:"column",justifyContent:"center",flexWrap:"wrap",alignContent:"center"}} >
-      <span className="eyebrow">— Sessions & Pricing —</span>
-      <h2 className="addon-main-title">Photography Packages</h2>
-      <p>Choose the session that's right for your family. All packages include professionally edited images and JPEG digital files.</p>
-    </div>
-
-        <div className="novo-pricing-container flex flex-nowrap overflow-x-auto no-scrollbar">
-          {packages.map((pkg, idx) => (
-            <motion.div 
-              key={pkg.name}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: idx * 0.1 }}
-              className="pricing-column group flex-shrink-0 w-[85vw] md:w-[33.33vw] relative"
-            >
-              <div className="column-bg">
-                <img src={pkg.img} alt={pkg.name} className="w-full h-full object-cover" />
-                <div className="column-overlay" />
-              </div>
-
-              <div className="column-header">
-                <span className="eyebrow !text-white/70">{pkg.name}</span>
-                {pkg.note && <p className="text-[#C8A988] text-[9px] tracking-widest uppercase mt-1">{pkg.note}</p>}
-              </div>
-
-              <div className="column-center">
-                <h2 className="huge-price"><span className="currency">€</span>{pkg.price}</h2>
-                <Link href="/booking" className="purchase-btn">PURCHASE</Link>
-              </div>
-
-              <div className="column-footer">
-                <div className="options-trigger">
-                  <span>OPTIONS</span>
-                  <span className="plus-icon">+</span>
-                </div>
-                <div className="hidden-details">
-                  <ul className="details-list">
-                    {pkg.details.map((d, i) => <li key={i}>{d}</li>)}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+    <main style={{ backgroundColor: '#E8E5E0', minHeight: '100vh', paddingTop: '150px', paddingBottom: '100px', paddingLeft: '20px', paddingRight: '20px', color: '#1a1a1a' }}>
+      
+      {/* Hero Section */}
+      <section style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', marginBottom: '80px' }}>
+        <span style={{ display: 'block', fontSize: '12px', letterSpacing: '0.3em', color: '#4a4a4a', marginBottom: '20px' }}>
+          PRICING & PACKAGES
+        </span>
+        <h1 style={{ fontFamily: 'serif', fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', margin: 0, fontWeight: '400' }}>
+          Invest in <i style={{ color: '#C8A988', fontStyle: 'italic' }}>Memories</i>
+        </h1>
       </section>
 
-     {/* 2. ADD-ONS SECTION - Editorial Redesign */}
-      <section className= "addon-section ">
-        <div className="addon-container " >
-    <div className="addon-header">
-      <span className="eyebrow">Enhancements</span>
-      <h2 className="addon-main-title">Elevate <br/> Your <br/> Session</h2>
-    </div>
+      {/* Packages List */}
+      <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+        {packages.map((pkg, idx) => (
+          <motion.div 
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            style={{ marginBottom: '120px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+          >
+            {/* Image Container */}
+            <div style={{ width: '100%', maxWidth: '400px', height: '533px', position: 'relative', marginBottom: '40px', backgroundColor: '#d1cec9', boxShadow: '0 20px 50px rgba(0,0,0,0.08)', borderRadius: '2px', overflow: 'hidden' }}>
+              <Image 
+                src={pkg.image} 
+                alt={pkg.name} 
+                fill 
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
 
-   <div className="addon-list-wrap">
-      {addOns.map((item, idx) => (
-        <div key={item.title} className="addon-row group">
-          <div className="addon-row-content">
-            <div className="addon-name-side">
-              <span className="addon-num">0{idx + 1}</span>
-              <h3 className="addon-item-name">{item.title}</h3>
+            {/* Info Section */}
+            <div style={{ width: '100%', textAlign: 'left' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '30px', flexWrap: 'wrap', gap: '10px' }}>
+                <h2 style={{ fontFamily: 'serif', fontSize: '32px', margin: 0, fontWeight: '400', lineHeight: '1.2' }}>{pkg.name}</h2>
+                <span style={{ fontSize: '16px', letterSpacing: '2px', color: '#4a4a4a', fontWeight: '300' }}>FROM: €{pkg.price}</span>
+              </div>
+
+              {/* Decorative Borders around details */}
+              <div style={{ borderTop: '1px solid #d1cec9', borderBottom: '1px solid #d1cec9', padding: '40px 0', marginBottom: '40px' }}>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  {pkg.details.map((detail, i) => (
+                    <li key={i} style={{ fontStyle: 'italic', fontSize: '18px', color: '#4a4a4a', marginBottom: '14px', fontFamily: 'serif', opacity: 0.9 }}>
+                      • {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Centered Button */}
+              <div style={{ textAlign: 'center' }}>
+                <Link href="/booking" style={{ 
+                  display: 'inline-block',
+                  padding: '14px 45px',
+                  border: '1px solid #1a1a1a',
+                  borderRadius: '50px',
+                  textDecoration: 'none',
+                  color: '#1a1a1a',
+                  fontSize: '10px',
+                  letterSpacing: '3px',
+                  textTransform: 'uppercase',
+                  fontWeight: '600',
+                  transition: '0.3s'
+                }}>
+                  Book & Pay Now
+                </Link>
+              </div>
             </div>
-            <div className="addon-price-side">
-              <span className="addon-item-price">{item.price}</span>
-            </div>
-          </div>
-          <div className="addon-line" />
-        </div>
-      ))}
-      
-      {/* Footer Notes */}
-      <div className="addon-footer-notes">
-        <p>📦 Delivery time: 7 working days</p>
-        <p>ℹ️ Raw images are not included in any package</p>
+          </motion.div>
+        ))}
       </div>
-    </div>
 
-  </div>
-</section>
+      {/* Add Ons */}
+      <section style={{ maxWidth: '600px', margin: '150px auto 0', textAlign: 'center' }}>
+        <h2 style={{ fontFamily: 'serif', fontSize: '36px', marginBottom: '50px', fontWeight: '400' }}>Add Ons</h2>
+        <div style={{ marginBottom: '80px' }}>
+          {addOns.map((item, i) => (
+            <p key={i} style={{ fontStyle: 'italic', color: '#4a4a4a', fontSize: '18px', margin: '20px 0', fontFamily: 'serif' }}>
+              *{item.title} — {item.price}
+            </p>
+          ))}
+        </div>
+
+        <div style={{ borderTop: '1px solid #d1cec9', paddingTop: '40px', fontSize: '13px', fontStyle: 'italic', color: '#777', lineHeight: '1.8' }}>
+          <p>Note: No raw images are shared for any package.</p>
+          <p>Delivery within 7 working days.</p>
+        </div>
+      </section>
     </main>
-    <Footer />
-    </>
   );
 }

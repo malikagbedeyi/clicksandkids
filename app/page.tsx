@@ -36,18 +36,22 @@ export default async function HomePage() {
             <Link href="/about" className="hero-link mt-8">READ OUR STORY —</Link>
           </div>
           <div className="note-image-wrap">
-             <img src="/image/hero/img-01.jpg" alt="Studio Session" className="w-full h-full object-cover object-top" />
+             <img src="/image/gallery/img-01.jpg"  alt="Studio Session" className="w-full h-full object-cover object-top" />
           </div>
         </div>
       </section>
 
-      <WhyChooseUs />
+<section className="combine-section">
+  <div className="combine-section-overlay"></div>
+     <section className=" home-section">
+       <WhyChooseUs />
+     </section>
 
-      <section id="pricing" className="page-shell home-section border-t border-white/10" style={{padding:"0 8%"}}>
+      <section id="pricing" className="page-shell home-section border-t border-white/10" style={{padding:"4% 8%",zIndex:2,position:"relative",borderTop:"1px solid #cfa77b"}}>
         <div className="section-header-flex">
           <div>
-            <span className="eyebrow">— Sessions & Pricing —</span>
-            <h2>Photography Packages</h2>
+            <span className="eyebrow" >— Sessions & Pricing —</span>
+            <h2 style={{color:"#fff"}}>Photography Packages</h2>
           </div>
           <Link href="/pricing" className="view-more-link">VIEW ALL PACKAGES —</Link>
         </div>
@@ -64,7 +68,7 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
-
+</section>
       <section className="page-shell home-section border-t border-white/5">
         <LatestWorks initialPhotos={allMedia} />
       </section>

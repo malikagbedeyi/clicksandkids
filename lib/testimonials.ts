@@ -3,10 +3,15 @@ import { prisma } from "./db";
 import { revalidatePath } from "next/cache";
 
 export async function getApprovedTestimonials() {
-  return await prisma.testimonial.findMany({
-    where: { approved: true },
-    orderBy: { createdAt: "desc" },
-  });
+  try {
+    return await prisma.testimonial.findMany({
+      where: { approved: true },
+      orderBy: { createdAt: "desc" },
+    });
+  } catch (error) {
+    console.error("Error fetching testimonials:", error);
+    return [];
+  }
 }
 
 export async function getAllTestimonials() {

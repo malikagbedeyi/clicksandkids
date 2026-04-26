@@ -8,13 +8,13 @@ const slides = [
     id: "01",
     title: <>Capture <br /> <span>Your Moments</span> <b>with Us</b></>,
     description: "Every childhood moment is fleeting — let us help you hold onto it forever.",
-    image: "/image/hero/img-03.jpg",
+    image: "/image/gallery/img-03.JPG",
   },
   {
     id: "02",
     title: <>Creative <br /> <span>Themed Sets</span> <b>for Kids</b></>,
     description: "From classic plain to stunning African Trad builds, tailored for every occasion.",
-    image: "/image/hero/img-02.jpg",
+    image: "/image/gallery/img-02.jpg",
   },
   {
     id: "03",

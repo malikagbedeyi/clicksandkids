@@ -13,7 +13,7 @@ export default function AboutPage() {
     <main className="about-split-layout">
       <aside className="sticky-side">
         <Image
-          src="/image/hero/img-02.jpg" 
+          src="/image/gallery/img-01.jpg" 
           alt="Ebun Adeleye - Photographer & Founder"
           width={1200}
           height={1800}
@@ -91,7 +91,7 @@ export default function AboutPage() {
         </div>
       </section>
     </main>
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 }

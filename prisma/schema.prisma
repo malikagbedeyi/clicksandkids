@@ -4,8 +4,8 @@ generator client {
 
 datasource db {
   provider  = "postgresql"
-  // Changed to NON_POOLING to prevent Vercel build timeouts
-  url       = env("POSTGRES_URL_NON_POOLING")
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("DATABASE_URL")       
 }
 
 model Photo {

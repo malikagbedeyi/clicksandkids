@@ -39,8 +39,8 @@ export default function WhyChooseUs() {
   return (
     <section className="why-choose-section">
       <div className="max-w-[1200px] mx-auto px-4">
-        <span className="eyebrow">Why Choose Us</span>
-        <h2 className="text-white font-serif text-5xl tracking-tight mt-4">
+        <span className="eyebrow" style={{color:"#fff"}}>Why Choose Us</span>
+        <h2 className="text-white font-serif text-5xl   mt-4" style={{color:"#fff"}}>
           The Clicksandkids Difference
         </h2>
 
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
               <h3 className="why-choose-title">
                 {item.title}
               </h3>
-              <p className="why-choose-desc">
+              <p className="why-choose-desc" style={{color:"#fff"}}>
                 {item.desc}
               </p>
             </motion.div>

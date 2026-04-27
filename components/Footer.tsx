@@ -71,7 +71,7 @@ export default function Footer() {
 
     {/* Bottom Footer: Copyright */}
     <div className="footer-bottom">
-      <p>© {new Date().getFullYear()} Clicksandkids Photography. All rights reserved.</p>
+      <p style={{color:"#fff"}}>© {new Date().getFullYear()} Clicksandkids Photography. All rights reserved.</p>
       <div className="footer-legal">
         <Link href="/privacy">Privacy Policy</Link>
         <span className="mx-2">•</span>

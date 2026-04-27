@@ -26,7 +26,7 @@ export default function ContactPage() {
           </div>
           
           <div className="contact-footer-note" >
-             <p>© 2026 Clicksandkids. All rights reserved.</p>
+            {/* <p style={{color:"#fff"}}>© {new Date().getFullYear()} Clicksandkids Photography. All rights reserved.</p> */}
           </div>
         </motion.section>
 

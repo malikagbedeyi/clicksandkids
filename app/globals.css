@@ -1847,6 +1847,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-position: center 0;
   background-attachment: fixed; 
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  min-width:"100%";
   min-height: 100vh;
   padding: 160px 0 100px;
   display: flex;

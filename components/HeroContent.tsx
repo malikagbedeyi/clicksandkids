@@ -8,7 +8,7 @@ const slides = [
     id: "01",
     title: <>Capture <br /> <span>Your Moments</span> <b>with Us</b></>,
     description: "Every childhood moment is fleeting — let us help you hold onto it forever.",
-    image: "/image/gallery/img-03.JPG",
+    image: "/image/gallery/img-03.jpg",
   },
   {
     id: "02",
@@ -20,7 +20,7 @@ const slides = [
     id: "03",
     title: <>Timeless <br /> <span>Maternity</span> <b>Glow</b></>,
     description: "A cinematic portrait experience for mother and child.",
-    image: "/image/hero/photo-img.jpg",
+    image: "/image/gallery/img-05.jpg",
   },
 ];
 

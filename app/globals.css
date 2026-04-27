@@ -3265,7 +3265,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 @media (max-width: 1024px) {
   .combine-section, 
-  .footer-section {
+  .footer-section ,
+  .booking-page-wrapper,
+  .contact-page-wrapper ,
+  .combine-section-why,
+  .combine-section-pricing{
    width: 100%;
    height: 100%;
     background-attachment: scroll !important;
@@ -3275,5 +3279,20 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-position: center 0;
    
     background-size: cover;
+  }
+  .combine-section{
+ background-image: none;
+  }
+  .combine-section-why{
+ background-image: url(/image/gallery/img-01.jpg);
+ background-size: cover;
+  object-fit: cover;
+  object-position: center 0;
+  background-position: center 0;
+  position: relative;
+  text-align: center;
+  }
+  .combine-section-pricing{
+ background-image: url(/image/gallery/img-03.jpg);
   }
 }

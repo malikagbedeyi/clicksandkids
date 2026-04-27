@@ -43,11 +43,11 @@ export default async function HomePage() {
 
 <section className="combine-section">
   <div className="combine-section-overlay"></div>
-     <section className=" home-section">
+     <section className=" home-section combine-section-why">
        <WhyChooseUs />
      </section>
 
-      <section id="pricing" className="page-shell home-section border-t border-white/10" style={{padding:"4% 8%",zIndex:2,position:"relative",borderTop:"1px solid #cfa77b"}}>
+      <section id="pricing" className="combine-section-pricing page-shell home-section border-t border-white/10" style={{padding:"4% 8%",zIndex:2,position:"relative",borderTop:"1px solid #cfa77b"}}>
         <div className="section-header-flex">
           <div>
             <span className="eyebrow" >— Sessions & Pricing —</span>

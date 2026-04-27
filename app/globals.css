@@ -650,6 +650,7 @@ margin: 40px;
   /* height: 100vh; */
   background-image: url(/image/gallery/img-01.jpg);
   background-size: cover;
+  object-fit: cover;
   background-position: center 0;
   background-attachment: fixed; 
   position: relative;
@@ -1295,6 +1296,7 @@ position: absolute;
   /* height: 100vh; */
   background-image: url(/image/gallery/img-01.jpg);
   background-size: cover;
+  object-fit: cover;
   background-position: center 0;
   background-attachment: fixed; 
   position: relative;
@@ -1662,6 +1664,7 @@ position: absolute;
   /* background-color: #0A0A0A; */
    background-image: url(/image/gallery/img-01.jpg);
   background-size: cover;
+  object-fit: cover;
   background-position: center 0;
   background-attachment: fixed; 
   position: relative;
@@ -1840,6 +1843,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: var(--text-main);
    background-image: url(/image/gallery/photo-03.jpg);
   background-size: cover;
+  object-fit: cover;
   background-position: center 0;
   background-attachment: fixed; 
   position: relative;
@@ -2069,6 +2073,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   border-radius: 30px; /* Rounded cards */
    background-image: url(/image/gallery/img-02.JPG);
    background-position:center  bottom ;
+   object-fit: cover;
    object-fit: cover;
   overflow: hidden;
   display: flex;

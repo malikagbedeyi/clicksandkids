@@ -141,7 +141,7 @@ export default function PricingPage() {
               </div>
 
               {/* Centered Button */}
-              <div style={{ textAlign: 'center' }}>
+              {/* <div style={{ textAlign: 'center' }}>
                 <Link href="/booking" style={{ 
                   display: 'inline-block',
                   padding: '14px 45px',
@@ -157,7 +157,7 @@ export default function PricingPage() {
                 }}>
                   Book & Pay Now
                 </Link>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         ))}

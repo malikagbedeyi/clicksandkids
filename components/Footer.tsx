@@ -48,9 +48,9 @@ export default function Footer() {
 
       <div className="footer-column">
         <span className="footer-label">Contact</span>
-        <p className="footer-info">hello@clicksandkids.ie</p>
+        <p className="footer-info">Ebun@clickandkids.com</p>
         <p className="footer-info">Drogheda & Dublin, Ireland</p>
-        <p className="footer-info">+353 (0) 8X XXX XXXX</p>
+        <p className="footer-info">+353 085 145 8174</p>
       </div>
 
       <div className="footer-column">

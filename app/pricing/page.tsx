@@ -8,55 +8,55 @@ const packages = [
   { 
     name: "Kid's Mini Session", 
     price: "120", 
-    image: "/image/gallery/img-05.jpg", // Child with cake on face
+    image: "/image/gallery/img-05.jpg", 
     details: ["1 Outfit", "25-minute studio session", "4 Edited Images", "Plain Backdrop"] 
   },
   { 
     name: "Portrait Session", 
     price: "180", 
-    // image: "/image/gallery/img-01.jpg", // Woman in brown blazer
+    // image: "/image/gallery/img-01.jpg", 
     details: ["1 Outfit", "40-minute studio session", "6 Edited Images", "Plain Backdrop"] 
   },
   { 
     name: "Kid's Standard Session", 
     price: "220", 
-    image: "/image/gallery/img-06.jpg", // Child in red dress
+    image: "/image/gallery/img-06.jpg", 
     details: ["2 Outfits", "45-minute studio session", "6 Edited Images", "1 Themed & 1 Plain Backdrop"] 
   },
   { 
     name: "Maternity Session", 
     price: "220", 
-    // image: "/image/gallery/img-04.jpg", // Pregnant woman with child
+    // image: "/image/gallery/img-04.jpg", 
     details: ["1 Outfit", "1-hour studio session", "6 Edited Images", "1 Themed & 1 Plain Backdrop"] 
   },
   { 
     name: "African Trad Session", 
     price: "150", 
-    image: "/image/gallery/img-03.jpg", // Boy in traditional blue attire
+    image: "/image/gallery/img-03.jpg", 
     details: ["1 Outfit", "30-minute studio session", "5 Edited Images", "Trad set build"] 
   },
   { 
     name: "Cake Smash (6–18 months)", 
     price: "180", 
-    image: "/image/gallery/img-05.jpg", // Child with purple balloons
+    image: "/image/gallery/img-07.jpg", 
     details: ["1 Outfit", "30-minute studio session", "6 Edited Images", "Mini balloon setup"] 
   },
   { 
     name: "Mummy & Me Session", 
     price: "180", 
-    image: "/image/gallery/img-02.jpg", // Mother hugging child
+    image: "/image/gallery/img-02.jpg", 
     details: ["1 Outfit", "45-minute studio session", "4 Edited Images", "Plain Backdrop"] 
   },
   { 
     name: "Siblings Session (Max 3)", 
     price: "180", 
-    image: "/image/gallery/img-06.jpg", 
+    // image: "/image/gallery/img-06.jpg", 
     details: ["1 Outfit", "45-minute studio session", "4 Edited Images", "Themed or Plain Backdrop"] 
   },
   { 
     name: "Twins Session", 
     price: "300", 
-    image: "/image/gallery/img-07.jpg", 
+    // image: "/image/gallery/img-07.jpg", 
     details: ["2 Outfits", "1 hour 30-minute studio session", "6 Edited + 8 JPEGs", "1 Custom & 1 Plain Backdrop"] 
   },
   { 
@@ -74,7 +74,7 @@ const packages = [
   { 
     name: "Kids Premium Session", 
     price: "350", 
-    image: "/image/gallery/img-08.jpg", // Child in traditional green/orange outfit on throne
+    image: "/image/gallery/img-08.jpg", 
     details: ["3 Outfits (Cake smash, Trad & more)", "1 hour 30-minute studio session", "9 Edited Images", "Trad set build", "Themed Backdrop for Cake Smash"] 
   },
 ];
@@ -112,15 +112,17 @@ export default function PricingPage() {
             viewport={{ once: true }}
             style={{ marginBottom: '120px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
           >
-            {/* Image Container */}
-            <div style={{ width: '100%', maxWidth: '400px', height: '533px', position: 'relative', marginBottom: '40px', backgroundColor: '#d1cec9', boxShadow: '0 20px 50px rgba(0,0,0,0.08)', borderRadius: '2px', overflow: 'hidden' }}>
-              <Image 
-                src={pkg.image} 
-                alt={pkg.name} 
-                fill 
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
+            {/* Conditional Rendering: Only show if image property exists */}
+            {pkg.image && (
+              <div style={{ width: '100%', maxWidth: '400px', height: '533px', position: 'relative', marginBottom: '40px', backgroundColor: '#d1cec9', boxShadow: '0 20px 50px rgba(0,0,0,0.08)', borderRadius: '2px', overflow: 'hidden' }}>
+                <Image 
+                  src={pkg.image} 
+                  alt={pkg.name} 
+                  fill 
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+            )}
 
             {/* Info Section */}
             <div style={{ width: '100%', textAlign: 'left' }}>
@@ -139,25 +141,6 @@ export default function PricingPage() {
                   ))}
                 </ul>
               </div>
-
-              {/* Centered Button */}
-              {/* <div style={{ textAlign: 'center' }}>
-                <Link href="/booking" style={{ 
-                  display: 'inline-block',
-                  padding: '14px 45px',
-                  border: '1px solid #1a1a1a',
-                  borderRadius: '50px',
-                  textDecoration: 'none',
-                  color: '#1a1a1a',
-                  fontSize: '10px',
-                  letterSpacing: '3px',
-                  textTransform: 'uppercase',
-                  fontWeight: '600',
-                  transition: '0.3s'
-                }}>
-                  Book & Pay Now
-                </Link>
-              </div> */}
             </div>
           </motion.div>
         ))}

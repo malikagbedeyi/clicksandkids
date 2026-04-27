@@ -8,13 +8,13 @@ const packages = [
   { 
     name: "Kid's Mini Session", 
     price: "120", 
-    image: "/image/gallery/img-07.jpg", // Child with cake on face
+    image: "/image/gallery/img-05.jpg", // Child with cake on face
     details: ["1 Outfit", "25-minute studio session", "4 Edited Images", "Plain Backdrop"] 
   },
   { 
     name: "Portrait Session", 
     price: "180", 
-    image: "/image/gallery/img-01.jpg", // Woman in brown blazer
+    // image: "/image/gallery/img-01.jpg", // Woman in brown blazer
     details: ["1 Outfit", "40-minute studio session", "6 Edited Images", "Plain Backdrop"] 
   },
   { 
@@ -26,7 +26,7 @@ const packages = [
   { 
     name: "Maternity Session", 
     price: "220", 
-    image: "/image/gallery/img-04.jpg", // Pregnant woman with child
+    // image: "/image/gallery/img-04.jpg", // Pregnant woman with child
     details: ["1 Outfit", "1-hour studio session", "6 Edited Images", "1 Themed & 1 Plain Backdrop"] 
   },
   { 
@@ -56,19 +56,19 @@ const packages = [
   { 
     name: "Twins Session", 
     price: "300", 
-    image: "/image/gallery/img-05.jpg", 
+    image: "/image/gallery/img-07.jpg", 
     details: ["2 Outfits", "1 hour 30-minute studio session", "6 Edited + 8 JPEGs", "1 Custom & 1 Plain Backdrop"] 
   },
   { 
     name: "Family Session (Max 4)", 
     price: "250", 
-    image: "/image/gallery/img-04.jpg", 
+    // image: "/image/gallery/img-04.jpg", 
     details: ["1 Outfit", "45-minute studio session", "6 Edited Images", "Plain Backdrop"] 
   },
   { 
     name: "Family Premium (Max 4)", 
     price: "350", 
-    image: "/image/hero/photo-img.jpg", 
+    // image: "/image/hero/photo-img.jpg", 
     details: ["2 Outfits for child", "1 Outfit for parents", "1 Themed Backdrop for child", "1 hour 25-minute studio session", "6 Edited Images", "Plain Backdrop for family"] 
   },
   { 

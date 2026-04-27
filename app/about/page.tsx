@@ -34,9 +34,9 @@ export default function AboutPage() {
             we pour heart into every frame.
           </p>
           <p>
-            We work with a variety of beautifully curated backdrops — from classic plain and themed sets 
-            to stunning African Trad builds — ensuring each session is uniquely yours. 
-            Every edited image is professionally colour-graded and delivered within 7 working days.
+            We work with a variety of beautifully curated backdrops from classic plain and themed sets 
+            to stunning African Trad builds ensuring each session is uniquely yours. 
+            Every edited image is professionally colour graded and delivered within 7 working days.
           </p>
         </div>
 
@@ -56,10 +56,10 @@ export default function AboutPage() {
             <p className="mb-6">
               I picked up my camera determined to hold onto every first giggle and wobbly step. 
               What started as a passion for preserving my own family's memories quickly grew into a calling: 
-              capturing those same fleeting moments for other families — the chaos, the laughter, the love.
+              capturing those same fleeting moments for other families the chaos, the laughter, the love.
             </p>
             <p>
-              My background in **Law** means I bring an eye for detail to everything I do — 
+              My background in **Law** means I bring an eye for detail to everything I do
               noticing the little things that make a great photo truly special. My goal is to create 
               a relaxed, fun experience where your family can just be yourselves.
             </p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
             <div>
               <h3>Professional Craft</h3>
               <p className="text-sm leading-relaxed opacity-60">
-                We do not share raw images — only the very best of your session, 
+                We do not share raw images only the very best of your session, 
                 carefully retouched to editorial standards.
               </p>
             </div>
@@ -86,7 +86,7 @@ export default function AboutPage() {
         {/* Closing CTA */}
         <div className="mt-20 pt-10 border-t border-white/5">
           <p className="font-serif text-2xl text-white italic">
-            Every childhood moment is fleeting — let me help you hold onto it forever.
+            Every childhood moment is fleeting let me help you hold onto it forever.
           </p>
         </div>
       </section>

@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <main className="contact-page-wrapper">
       {/* Dynamic Overlay for depth */}
-      <div className="section-overlay"></div>
+      {/* <div className="section-overlay"></div> */}
       
       <div className="contact-container">
         {/* Left Side: Editorial Typography */}

@@ -80,7 +80,7 @@ export default function HeroContent() {
             key={slide.id}
             onClick={() => setIndex(i)}
             className={`cursor-pointer transition-all duration-300 ${
-              index === i ? "active text-[#C8A988] scale-125" : "text-white/40 hover:text-white"
+              index === i ? "active text-[#fff] scale-125" : "text-white hover:text-white"
             }`}
             style={{ background: 'none', border: 'none', padding: 0 }}
           >

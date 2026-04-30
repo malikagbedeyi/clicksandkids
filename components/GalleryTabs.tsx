@@ -40,7 +40,7 @@ export default function GalleryTabs({ initialPhotos, initialVideos }: GalleryTab
       .map((p) => {
         
         let width = 800;
-        let height = 800; // default square
+        let height = 800;  
 
         if (p.aspect === "portrait") {
           height = 1100;

@@ -14,7 +14,7 @@ export default async function GalleryPage() {
   const videos = await getPhotosByType("video");
 
   return (
-    <main className="min-h-screen bg-[#0A0A0A]">
+    <main className="min-h-screen  ">
       <div className="gallery-page-header">
         <h1 className="text-white">Gallery</h1>
       </div>

@@ -49,20 +49,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.className} ${playfair.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+       
+      <body 
+        className={`${montserrat.className} ${playfair.variable}`}
+        suppressHydrationWarning
+      >
         <Header />
         {children}
-        <Toaster 
-          position="top-right"
-          toastOptions={{
-            classNames: {
-              toast: "sonner-toast",
-              description: "sonner-description",
-              closeButton: "sonner-close-button"
-            }
-          }}
-        />
+        <Toaster />
       </body>
     </html>
   );

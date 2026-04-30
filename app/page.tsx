@@ -21,14 +21,14 @@ export default async function HomePage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#0A0A0A]">
+    <main className="min-h-screen">
       <HeroContent />
 
       <section className="page-shell home-section mobile-who">
         <div className="note-on-childhood">
           <div className="note-copy">
             <span className="eyebrow">Who We Are</span>
-            <h2 className="text-white mb-6">Every child is a story <br/>waiting to be told.</h2>
+            <h2 className="mb-9 mt-8">Every child is a story <br className="mt-5"/>waiting to be told.</h2>
             <p>
               At Clicksandkids, our studio is a warm, welcoming space designed to let little personalities shine. 
               We pour heart into every frame to ensure each session is uniquely yours.
@@ -69,7 +69,7 @@ export default async function HomePage() {
         </div>
       </section>
 </section>
-      <section className="page-shell home-section border-t border-white/5">
+      <section className="page-shell home-section border-t">
         <LatestWorks initialPhotos={allMedia} />
       </section>
       <section>

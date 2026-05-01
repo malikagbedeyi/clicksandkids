@@ -23,8 +23,8 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://clickandkids.photo"),
   title: {
-    default: "Click & Kids Photography",
-    template: "%s | Click & Kids Photography"
+    default: "Click & Kids",
+    template: "%s | Click & Kids"
   },
   description: "Capturing the joy and authentic moments of childhood with a playful, creative approach.",
   icons: {

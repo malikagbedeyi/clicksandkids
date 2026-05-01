@@ -34,7 +34,7 @@ export default function LatestWorks({ initialPhotos }: { initialPhotos: any[] })
   }, [filter, initialPhotos]);
 
   return (
-   <section className="w-full py-32 bg-[#0A0A0A]" style={{padding:"0 8%"}}>
+   <section className="w-full py-32  " style={{padding:"0 8%"}}>
   {/* Header Section */}
   <div className="section-heading text-center mb-16" style={{display:"flex", alignItems:"center", justifyContent:"center", margin:"0 auto",}}>
     <h2 className=" mt-4 font-serif text-6xl md:text-8xl tracking-tight " style={{color:"#C8A988"}}>
